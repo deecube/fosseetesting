@@ -32,11 +32,5 @@ x=[0.0;
 0.0177679126351528;
 -0.022941402139383;
 4.97862259083664;
-]
-fs=4e6;
-[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels', 0, 'fig', 'on' )
-// !--error 4 
-//Undefined variable: O
-//at line      37 of exec file called by :    
-//cycle18.sce', -1
- 
+];
+dutycycle(x,'fig','on');
