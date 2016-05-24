@@ -10,4 +10,5 @@ disp(a);
 //at line       3 of exec file called by :    
 //poly/lsf2poly3.sce', -1
 
+
 //In MATLAB when i/p matrix is null o/p is a null matrix too
