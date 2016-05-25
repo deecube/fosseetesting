@@ -6,22 +6,14 @@ disp(R);
 disp(U);
 disp(K);
 //output
-//!--error 27 
-//Division by zero...
-//at line      79 of function rlevinson called by :  
-//[R,U,K] = rlevinson(X, efinal);
-//at line       4 of exec file called by :    
-//son/rlevinson4.sce', -1
+//    Inf  
+//  - Inf  
+//    Inf  
  
+//    1.    1.    6.  
+//    0.    1.    7.  
+//    0.    0.    1.  
  
-//corresponsing MATLAB o/p
-//  -Inf
-//   Inf
-//  -Inf
-
-//     1     1     6
-//     0     1     7
-//     0     0     1
-
-//     1
-//     6
+//    1.  
+//    6.  
+ 
