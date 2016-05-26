@@ -4,10 +4,8 @@
 ###ac2poly
 ###poly2ac
 ###schurrc
-###ac2rc
 ###midcross
 ###mag2pow
-###pow2db
 ###slewrate
 ###levinson
 ###db
@@ -15,8 +13,15 @@
 ###peak2rms
 ###rc2poly
 ###dutycycle
-###statelevels
-###rlevinson
 ###phasedelay
-###tf2zpk
+###rlevinson (function hasnt been uploaded to github,hence haven't moved to documentation)
+
+## Were erroneous but have coded from scratch to resolve issues,need to retest
+###tf2zpk (resolved dependency issue)
+###pow2db
+
+
+## Moved to documentation
+###ac2rc
+###statelevels
 ###lsf2poly
