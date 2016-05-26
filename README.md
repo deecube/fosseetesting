@@ -19,3 +19,4 @@
 ###rlevinson
 ###phasedelay
 ###tf2zpk
+###lsf2poly
