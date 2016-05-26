@@ -14,9 +14,9 @@
 ###rc2poly
 ###dutycycle
 ###phasedelay
-###rlevinson (function hasnt been uploaded to github,hence haven't moved to documentation)
+####rlevinson (function hasnt been uploaded to github,hence haven't moved to documentation)
 
-## Were erroneous but have coded from scratch to resolve issues,need to retest
+## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ###tf2zpk (resolved dependency issue)
 ###pow2db
 
