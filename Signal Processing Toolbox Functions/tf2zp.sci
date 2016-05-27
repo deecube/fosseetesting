@@ -1,3 +1,8 @@
+
+
+
+
+//Author Debdeep Dey
 function [z,p,k]=tf2zp(num,den);
 
 if (~isempty(den)) then

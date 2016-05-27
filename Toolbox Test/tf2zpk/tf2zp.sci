@@ -1,11 +1,38 @@
-function [z,p,k]=tf2zp(num,den);
+// Transfer function to zero pole conversion
+//[z,p,k]= tf2zp(b,a);
+//z=zeros of the corrsponding tf
+//p=poles of the corresponding tf
+//k=gain of the tf
+//b=vector containing the numerator coefficients of the transfer function in descending powers of s
+//a=vector containing the denominator coefficients of the transfer function in descending powers of s
+//For discrete-time transfer functions, it is highly recommended to
+//make the length of the numerator and denominator equal to ensure 
+//correct results.  You can do this using the function EQTFLENGTH in
+//the Signal Processing Toolbox. 
+//
+//
+//Author
+//Debdeep Dey
 
+function [z,p,k]=tf2zp(num,den);
+numop=argn(1);
+//take only the first row of numerator into consideration
+num=num(1,1:$);
+[rd,cod]=size(den);
+[ny,np]=size(num);
+
+if(rd>1) then
+    error("Denominator must be row vector");
+elseif np>cod then
+    error("Improper transfer function");
+end
 if (~isempty(den)) then
     coef=den(1);
 else
     coef=1;
 end
 if coef ==0 then
+    
 end
 //remove leading columns of zeros from numerator
 if ~isempty(num) then
@@ -13,7 +40,8 @@ if ~isempty(num) then
         num(:,1)=[];
       end
 end
-[ny,np]=size(num);
+
+
 //poles
 p=roots(den);
 //zeros and gain
