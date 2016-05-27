@@ -17,7 +17,7 @@
 function [z,p,k]=tf2zp(num,den);
 numop=argn(1);
 //take only the first row of numerator into consideration
-num=num(1,1:$);
+num=num(1,:);
 [rd,cod]=size(den);
 [ny,np]=size(num);
 
