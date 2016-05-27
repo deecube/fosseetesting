@@ -32,7 +32,7 @@ else
     coef=1;
 end
 if coef ==0 then
-    
+    error("Denominator must have non zero leading coefficient");
 end
 //remove leading columns of zeros from numerator
 if ~isempty(num) then
