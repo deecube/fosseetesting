@@ -18,6 +18,12 @@ function [z,p,k]=tf2zp(num,den)
 numop=argn(1);
 //take only the first row of numerator into consideration
 num=num(1,:);
+//remove leading columns of zeros from numerator
+if ~isempty(num) then
+    while(num(:,1)==0 & length(num)>1)
+        num(:,1)=[];
+      end
+end
 [rd,cod]=size(den);
 [ny,np]=size(num);
 
@@ -41,7 +47,9 @@ if ~isempty(num) then
       end
 end
 
-
+if (find(den==%inf) ~= [] | find(num==%inf) ~= []) then
+    error("Input to ROOTS must not contain NaN or Inf")
+end
 //poles
 
 p=roots(den);
@@ -58,3 +66,4 @@ for i=1:ny
 end
 z=roots(num);
 endfunction
+
