@@ -14,7 +14,7 @@
 //Author
 //Debdeep Dey
 
-function [z,p,k]=tf2zp(num,den);
+function [z,p,k]=tf2zp(num,den)
 numop=argn(1);
 //take only the first row of numerator into consideration
 num=num(1,:);
@@ -36,15 +36,17 @@ if coef ==0 then
 end
 //remove leading columns of zeros from numerator
 if ~isempty(num) then
-    while(num(:,1)==0) and length(num)>1)
+    while(num(:,1)==0 & length(num)>1)
         num(:,1)=[];
       end
 end
 
 
 //poles
+
 p=roots(den);
 //zeros and gain
+
 k=zeros(ny,1);
 linf=%inf;
 z=linf(ones(np-1,1),ones(ny,1));
