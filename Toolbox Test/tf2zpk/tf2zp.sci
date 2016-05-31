@@ -57,6 +57,7 @@ p=roots(den);
 
 k=zeros(ny,1);
 linf=%inf;
+
 z=linf(ones(np-1,1),ones(ny,1));
 for i=1:ny
     zz=roots(num(i,:));
@@ -66,4 +67,5 @@ for i=1:ny
 end
 z=roots(num);
 endfunction
+
 

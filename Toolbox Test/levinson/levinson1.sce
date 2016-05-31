@@ -1,6 +1,7 @@
 //check o/p for a given matrix
 r=[1 2 4;2 3 4; 4 5 5];
-a=levinson(r);
+n=3;
+a=levinson(r,n);
 disp(a);
 //output
 //!--error 60 

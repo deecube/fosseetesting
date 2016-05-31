@@ -49,12 +49,12 @@ function [b,a,N,M] = eqtflength(b,a)
         b=b(:)';
         a=[a,zeros(1,max(0,length(b)-length(a)))];
         b=[b,zeros(1,max(0,length(a)-length(b)))];
-        M=length(a(a~=0));
-        N=length(b(b~=0));
-        n=max(M,N);
-        M=M-1;
-        N=N-1;
-        a=a(1:n);
-        b=b(1:n);
+//        M=length(a(a~=0));
+//        N=length(b(b~=0));
+//        n=max(M,N);
+//        M=M-1;
+//        N=N-1;
+//        a=a(1:n);
+//        b=b(1:n);
     end
 endfunction
