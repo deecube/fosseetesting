@@ -7,10 +7,11 @@
 function [ydb] = mag2db(y)
 funcprot(0);
 
-    ydb(find(y>0))= 20 * log10(y(find(y>0)));
-    ydb(find(y<0))=%nan;
+    ydb(find(abs(y)>0))= 20 * log10(y(find(abs(y)>0)));
+    ydb(find(real(y)<0))=%nan;
     ydb(find(y==0))=-%inf;
     ydb=matrix(ydb,size(y));
+        
 
 endfunction
 
