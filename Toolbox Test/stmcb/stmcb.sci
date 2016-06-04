@@ -1,7 +1,10 @@
 function [b,a] = stmcb( x, u_in, q, p, niter, a_in )
     
      narginchk(3, 6, argn(2));
-    
+    //modify stmcb to handle exceptions when i/p is char
+    if(type(x)==10 | type(u_in)==10) then
+        error("Input in stmcb must be double/single, instead it was char");
+    end
     if length(u_in) == 1 then
         if argn(2) == 3 then
             niter = 5;
@@ -28,7 +31,7 @@ function [b,a] = stmcb( x, u_in, q, p, niter, a_in )
         
     else
         if length(u_in) ~= length(x) then
-            error('Invalid dimensions');
+            error('Input Signal x and Output Signal Y must have the same length');
         end
         
         if argn(2) < 6 then
