@@ -3,9 +3,7 @@ v=1e-3;
 u=db(-v,'power');
 disp(u);
 //output
-// power   
-//  - 30. + 13.643764i  
-
-//MATLAB o/p
-//Error using db (line 52)
-//Power cannot be negative.
+// !--error 10000 
+//Power cannot be negative
+//at line      58 of function db called by :  
+//u=db(-v,'power');
