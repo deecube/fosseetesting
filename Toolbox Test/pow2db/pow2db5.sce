@@ -2,10 +2,10 @@
 y=[-1000 -1000; -123 -1098; -1233 -1456];
 y1=pow2db(y);
 disp(y1);
-//Output
-//69.077553 + 31.415927i    69.077553 + 31.415927i  
-//48.121844 + 31.415927i    70.012456 + 31.415927i  
-//71.172055 + 31.415927i    72.834482 + 31.415927i  
-//the function shouldn't take negative values as input
-//the function uses ln instead of log base 10
-//the function needs to use log10 instead of log
+////Output
+// !--error 10000 
+//The power value must be non-negative
+//at line      20 of function pow2db called by :  
+//y1=pow2db(y);
+//at line       3 of exec file called by :    
+//lbox Test/pow2db/pow2db5.sce', -1
