@@ -14,12 +14,11 @@
 ####rc2poly
 ####dutycycle
 ####phasedelay
-####rlevinson (function hasnt been uploaded to github,hence haven't moved to documentation)
 ####stmcb
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
 ####pow2db
-####eqtflength
+####eqtflength 
 
 
 ## Moved to documentation
@@ -27,3 +26,5 @@
 ####statelevels
 ####lsf2poly
 ####mag2db
+####rlevinson
+####pow2db
