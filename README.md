@@ -5,7 +5,7 @@
 ####poly2ac
 ####schurrc
 ####midcross
-####mag2pow
+
 ####slewrate
 ####levinson
 
@@ -30,3 +30,4 @@
 ####pow2db
 ####eqtflength 
 ####db
+####mag2pow
