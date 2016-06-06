@@ -11,3 +11,7 @@ disp(d)
 //[d]=dutycycle(x);
 //at line       3 of exec file called by :    
 //cycle17.sce', -1
+
+
+//Corresponding matlab o/p 
+//d=Empty matrix: 0-by-1

@@ -43,3 +43,20 @@ disp('initial cross',initialcross)
 disp('next cross',nextcross)
 disp('midreference',midreference)
 plot(t,wavef)
+//output
+//
+//    0.2002094    0.2002094  
+// 
+// d   
+// 
+//    0.0000031    0.0000106  
+// 
+// initial cross   
+// 
+//    0.0000106    0.0000181  
+// 
+// next cross   
+// 
+//    2.5176834  
+// 
+// midreference   

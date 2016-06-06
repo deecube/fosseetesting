@@ -34,9 +34,14 @@ x=[0.0;
 4.97862259083664;
 ]
 fs=4e6;
-[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels', 0, 'fig', 'on' )
-// !--error 4 
-//Undefined variable: O
-//at line      37 of exec file called by :    
+t=1/fs;
+[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',0, 'fig', 'on' )
+evels',0, 'fig', 'on' )
+//output
+// !--error 10000 
+//Expected STATELEVELS to be of size 1x2
+//at line     170 of function midcross called by :  
+//at line     275 of function dutycycle called by :  
+//,0, 'fig', 'on' 
+//at line      38 of exec file called by :    
 //cycle18.sce', -1
- 
