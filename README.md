@@ -8,7 +8,7 @@
 ####mag2pow
 ####slewrate
 ####levinson
-####db
+
 
 ####peak2rms
 ####rc2poly
@@ -17,8 +17,8 @@
 ####stmcb
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
-####pow2db
-####eqtflength 
+
+
 
 
 ## Moved to documentation
@@ -28,3 +28,5 @@
 ####mag2db
 ####rlevinson
 ####pow2db
+####eqtflength 
+####db
