@@ -10,7 +10,7 @@
 ####levinson
 
 
-####peak2rms
+
 ####rc2poly
 ####dutycycle
 ####phasedelay
@@ -31,3 +31,4 @@
 ####eqtflength 
 ####db
 ####mag2pow
+####peak2rms
