@@ -24,7 +24,7 @@ funcprot(0);
 //	z= [ 2.1602469 ; 5.0662281 ]
 // Authors
 // 	Rahul Dalmia
-//Modified to handle char i/p by Debdeep Dey
+//Modified to handle char i/p and empty i/p vector by Debdeep Dey
 
 [nr, nc] = size (X);				// Dimensions of Input argument calculated
 if (type(X)==10) then
@@ -69,5 +69,8 @@ else
 			Y(i,1)=sqrt(n);		// RMS of each row
 		end
 	end
+end
+if (X==[]) then
+    Y=%nan;
 end
 endfunction
