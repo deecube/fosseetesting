@@ -24,14 +24,14 @@ funcprot(0);
 //	z= [ 2.1602469 ; 5.0662281 ]
 // Authors
 // 	Rahul Dalmia
-//Modified to handle char i/p and empty i/p vector by Debdeep Dey
+//Modified to handle char i/p,empty i/p vector and imaginary i/p by Debdeep Dey
 
 [nr, nc] = size (X);				// Dimensions of Input argument calculated
 if (type(X)==10) then
     X=ascii(X);
 end
 X(find(X==%i))=1;
-[nr, nc] = size (X);
+[nr, nc] = size (X); 
 if (~exists('dim','local')) then
 	if (nr==1) then				// For row vector
 		X= X.^2;
