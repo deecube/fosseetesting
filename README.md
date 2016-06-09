@@ -1,7 +1,7 @@
 # Fossee
 #Signal Processing Toolbox
 # Test Cases for functions :
-####c2poly
+####ac2poly
 ####poly2ac
 ####schurrc
 ####midcross
@@ -11,7 +11,7 @@
 
 
 
-####rc2poly
+
 ####dutycycle
 ####phasedelay
 ####stmcb
@@ -32,3 +32,4 @@
 ####db
 ####mag2pow
 ####peak2rms
+####rc2poly
