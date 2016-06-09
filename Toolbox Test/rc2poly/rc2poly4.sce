@@ -1,6 +1,8 @@
 k = [0.3090    0.9800    0.0031    0.0082   0.0082];
 l = [10    0.9800    0.0031    0.0082   0.0082];
-[a, efinal] = rc2poly(X,l)
+[a, efinal] = rc2poly(k,l)
+disp(a);
+disp(efinal);
 //output
 //!--error 15 
 //Submatrix incorrectly defined.

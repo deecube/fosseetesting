@@ -1,3 +1,4 @@
+//check o/p when the xero lag auto correlation has not been specified 
 X = [7 6 5 8 3 6]
 [a, efinal] = rc2poly(X);
 //output
