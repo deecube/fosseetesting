@@ -30,6 +30,7 @@ funcprot(0);
 if (type(X)==10) then
     X=ascii(X);
 end
+X(find(X==%i))=1;
 [nr, nc] = size (X);
 if (~exists('dim','local')) then
 	if (nr==1) then				// For row vector

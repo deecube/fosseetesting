@@ -3,4 +3,4 @@ y=[];
 Y=rms(y);
 disp(Y);
 //output
-//[]
+//Nan
