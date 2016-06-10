@@ -1,3 +1,6 @@
+//schurrc - Schur algorithm.
+//K = SCHURRC(R) computes the reflection coefficients from autocorrelation vector R. If R is a matrix, SCHURRC finds coefficients for each column of R, and returns them in the columns of K.
+//[K,E] = SCHURRC(R) returns the prediction error variance E. If R is a matrix, SCHURRC finds the error for each column of R, and returns them in the rows of E.
 //Modified to match matlab i/p and o/p and handle exceptions
 //Fixed bugs
 //by Debdeep Dey 
