@@ -1,4 +1,5 @@
 //check o/p when is a matrix
+pi=3.14;
 t = 0:0.001:1-0.001;
 x = cos(2*pi*100*t)';
 X = repmat(x,1,4);
