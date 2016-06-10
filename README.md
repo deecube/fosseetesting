@@ -8,7 +8,7 @@
 
 ####slewrate
 ####levinson
-####rms
+
 
 
 
@@ -33,3 +33,4 @@
 ####mag2pow
 ####peak2rms
 ####rc2poly
+####rms
