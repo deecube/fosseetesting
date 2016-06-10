@@ -3,7 +3,7 @@
 # Test Cases for functions :
 ####ac2poly
 ####poly2ac
-####schurrc
+
 ####midcross
 
 ####slewrate
@@ -34,3 +34,4 @@
 ####peak2rms
 ####rc2poly
 ####rms
+####schurrc
