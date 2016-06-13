@@ -4,7 +4,7 @@ efinal = 0.2;
 [k,r0] = poly2rc(a,efinal);
 disp(k,r0);
 //output
-
+ 
 // 5.6032289  
 // 
 //    0.3090264  

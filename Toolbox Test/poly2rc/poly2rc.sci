@@ -19,7 +19,7 @@ function [kr, R0]=poly2rc(a, efinal)
 //
 // Author
 // Jitendra Singh
-// modified to handle empty vector as i/p by Debdeep Dey
+// modified to handle empty vector as i/p by Debdeep Dey 
       if or(type(a)==10) then
     error ('Input arguments must be double.')
 end  

@@ -6,3 +6,4 @@ disp(b);
 //Leading coefficient cannot be zero.
 //at line      42 of function poly2rc called by :  
 //b=poly2rc(a);
+

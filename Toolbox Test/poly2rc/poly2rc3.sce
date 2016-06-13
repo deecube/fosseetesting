@@ -5,3 +5,4 @@ k = poly2rc(a);
 disp(k);
 //output
 //
+
