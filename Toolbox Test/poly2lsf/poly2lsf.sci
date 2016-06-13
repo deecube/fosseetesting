@@ -80,7 +80,7 @@ else          // Even order
         
     else
         P= filter(pp, aa, [1 zeros(1,n-na)]);
-        if m ~= 1
+        if m ~= 1 
             P = P(:);
         end
     end

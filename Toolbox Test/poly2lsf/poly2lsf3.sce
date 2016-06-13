@@ -9,3 +9,4 @@ disp(lsf);
 //lsf = poly2lsf(a);
 //at line       3 of exec file called by :    
 //Test/poly2lsf/poly2lsf3.sce', -1
+ 
