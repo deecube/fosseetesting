@@ -22,29 +22,15 @@ funcprot(0);
 // Authors
 // 	Rahul Dalmia
 
-[nr, nc] = size (X);// Dimensions of Input calculated
+[nr, nc] = size (X);			 // Dimensions of Input calculated
 
 if (~exists('dim','local')) then
 	if (nr==1) then
-		Y = zeros(nr, 1); // preset all output fields to 0
+		Y = zeros(nr, 1); 			 // preset all output fields to 0
 		for i= 1:nr
-            if((find(X==%i)~=[])) then
-                maxrel=max(real(X(i,:)));
-                maxim=max(abs(X(i,:)));
-                X(find(X==%i))=1;
-                minfinal=min((X(i,:)));
-                if(maxrel>maxim) then
-                    maxfinal=maxrel;
-                else
-                    maxfinal=maxim;
-                end
-                
-        else
-            maxim=max((X(i,:)));
-            minim=min((X(i,:)));
-        end
-        
-			Y(i,1)=maxfinal-minfinal;		 // Peak to peak value is calculated from the difference of max and min
+			maxim=max(X(i,:));		 // maximum and minimum values are found
+			minim=min(X(i,:));
+			Y(i,1)=maxim-minim;		 // Peak to peak value is calculated from the difference of max and min
 		end
 	else 
 		Y = zeros(1, nc); 			 // preset all output fields to 0
@@ -75,4 +61,3 @@ elseif (exists('dim','local')) then
 end
 
 endfunction
-
