@@ -19,7 +19,7 @@ function [kr, R0]=poly2rc(a, efinal)
 //
 // Author
 // Jitendra Singh
-// 
+// modified to handle empty vector as i/p by Debdeep Dey
       if or(type(a)==10) then
     error ('Input arguments must be double.')
 end  
@@ -45,24 +45,33 @@ end
          
          n=length(a)-1;
          e=zeros(n,1);
-         e(n)=efinal;
-         kr(n)=a($);
-         a=a';
-           
-         for j= (n-1):-1:1
-
-                   ee=a($)
-                 
-                  a = (a-kr(j+1)*flipdim(a,2,1))/(1-kr(j+1)^2);
-                                               
-                      a=a(1:$-1)
-                   kr(j)=a($);
-         
-      econj=conj(ee)
-    econj=econj'
-    e(j) = e(j+1)/(1.-(econj.*ee));      
-                              
+         if(n>=1) then
+             e(n)=efinal;
+             kr(n)=a($);
+             a=a';
+         else //when i/p is an empty vector
+             kr=[];
          end
+        
+         if(n>=1) then  
+            for j= (n-1):-1:1
+    
+                       ee=a($)
+                     
+                      a = (a-kr(j+1)*flipdim(a,2,1))/(1-kr(j+1)^2);
+                                                   
+                          a=a(1:$-1)
+                       kr(j)=a($);
+             
+          econj=conj(ee)
+        econj=econj'
+        e(j) = e(j+1)/(1.-(econj.*ee));      
+                                  
+             end
+             R0 = e(1)./(1-abs(kr(1))^2);    
+          else
+              R0=efinal;
+           end          
        
-     R0 = e(1)./(1-abs(kr(1))^2);            
+             
 endfunction
