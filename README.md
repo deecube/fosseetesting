@@ -30,7 +30,7 @@
 ####pow2db
 ####eqtflength 
 ####db
-####mag2pow
+####db2pow
 ####peak2rms
 ####rc2poly
 ####rms
