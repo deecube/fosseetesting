@@ -37,3 +37,5 @@
 ####schurrc
 ####poly2lsf
 ####poly2rc
+####lar2rc
+####rc2lar
