@@ -49,8 +49,6 @@ end
              e(n)=efinal;
              kr(n)=a($);
              a=a';
-         else //when i/p is an empty vector
-             kr=[];
          end
         
          if(n>=1) then  
