@@ -16,9 +16,15 @@ function R=rc2ac(k, R0)
 // See also
 //
 // Author
-// Jitendra Singh 
+// Jitendra Singh
+//             
           
- // load rc2poly and rlevinson before running this function          
+ // load rc2poly and rlevinson before running this function         
+ 
+       if or(type(k)==10) then
+    error ('Input arguments must be double.')
+end 
+     
  if (size(k,1) > 1) & (size(k,2) > 1)
     error ('The reflection coefficients must be stored in a vector.')
 end
@@ -27,10 +33,10 @@ end
      if argn(2)<2 then // checking of number of input arguments, if argn(2)<2 execute error.
               error ('Not enough input argument, define zero lag autocorrelation, R0.')
     end 
-    //match MATLAB o/p if any of the coefficient other than k(1) is equal to 1
-    if find(k(2:$)==1)~=[]  then
-        error("At least one of the reflection coefficients is equal to one.The algorithm fails for this case.");
+    if or(k(2:$)==1) then
+        error('Algorithm failed for this case. At least one of the reflection coefficients is equal to one.')
     end
+  
     [a, efinal]=rc2poly (k, R0);
     R=rlevinson(a, efinal)    
           
