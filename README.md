@@ -8,8 +8,7 @@
 
 ####slewrate
 ####levinson
-
-
+####isminphase
 
 
 ####dutycycle
