@@ -41,3 +41,4 @@
 ####rc2lar
 ####rc2ac
 ####taylorwin
+####isstable
