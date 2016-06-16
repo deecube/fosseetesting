@@ -14,7 +14,7 @@
 
 ####dutycycle
 ####phasedelay
-####stmcb
+
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
 
@@ -42,3 +42,4 @@
 ####rc2ac
 ####taylorwin
 ####isstable
+####stmcb
