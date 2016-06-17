@@ -8,8 +8,16 @@ function [k,e] = schurrc(R)
     narginchk(1,1,argn(2));
 if(type(R)==10) then
     w=R;
-    R=ascii(R);
-    R=matrix(R,size(w));
+    [nr,nc]=size(R);
+    if(nr==1 & nc==1) then
+        R=ascii(R);
+        R=matrix(R,length(w));
+    else
+        
+        R=ascii(R);
+        R=matrix(R,size(w));
+    end
+    
 end
 if(type(R) > 1) then
 	error('Input R is not a matrix')
