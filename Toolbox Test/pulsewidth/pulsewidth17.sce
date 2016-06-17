@@ -32,18 +32,5 @@ x=[0.0;
 0.0177679126351528;
 -0.022941402139383;
 4.97862259083664;
-]
-fs=4e6;
-t=1/fs;
-w=pulsewidth (x, t, 'Polarity', 'negative');
-disp(w);
-
-//output
-//
-//  - 74009040.  
-
-
-//corresponding MATLAB o/p
-
-//   5.6023e+07
-
+];
+pulsewidth(x,'fig','on');

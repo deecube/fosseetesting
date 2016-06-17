@@ -1,54 +1,54 @@
-function [w, initialcross, finalcross, midreference]=pulsewidth(x, varargin)
+function [p, initialcross, finalcross, nextcross, midreference]= pulseperiod(x, varargin)
     
-     // This function estimate pulse width of real vector X.
+    // This function estimate pulse period of real vector X.
     // Calling Sequence
-    // w=pulsewidth(x)
-    // w=pulsewidth(x, Fs)
-    // w=pulsewidth(x, t)
-    // w=pulsewidth (x, t, 'Polarity', pol)
-    // w=pulsewidth(x, t, 'MidPercentReferenceLevel', N )
-    // w=pulsewidth(x, t, 'Tolerance', M)
-    // w=pulsewidth(x, t,'StateLevels', O)
+    // p=pulseperiod(x)
+    // p=pulseperiod(x, Fs)
+    // p=pulseperiod(x, t)
+    // p=pulseperiod (x, t, 'Polarity', pol)
+    // p=pulseperiod(x, t, 'MidPercentReferenceLevel', N )
+    // p=pulseperiod(x, t, 'Tolerance', M)
+    // p=pulseperiod(x, t,'StateLevels', O)
     
-    // [w initialcross finalcross midreference]=pulsewidth(x)
-    // [w initialcross finalcross midreference]=pulsewidth(x, Fs)
-    // [w initialcross finalcross midreference]=pulsewidth(x, t)
-    // [w initialcross finalcross midreference]=pulsewidth(x, t, 'Polarity', pol)
-    // [w initialcross finalcross midreference]=pulsewidth(x, t, 'MidPercentReferenceLevel', N )
-    // [w initialcross finalcross midreference]= pulsewidth(x, t, 'Tolerance', M)
-    // [w initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels', [O 1])
-    // [w initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels', O, 'fig', on or off)
+    // [p initialcross finalcross nextcross midreference]=pulseperiod(x)
+    // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t)
+    // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t)
+    // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t, 'Polarity', pol)
+    // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t, 'MidPercentReferenceLevel', N )
+    // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t, 'Tolerance', M)
+    // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels', O)
+    // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels', O, 'fig', on or off)
     //  
     // Parameters
     // x: real vector.
     // Fs: specifies the sample rate, Fs, as a positive   scalar, where the first sample instant corresponds to a time of zero.
     // t: defiene instant sample time t as vector with same length of x, or specifies the sample rate, t, as a positive scalar.
-    // Polarity: specify the polarity of the pulse as either 'positive' or 'negative', where the default value is 'positive'.
+    // Polarity: specify the polarity of the pulse as either 'positive' or 'negative', where the default value is 'positive'
     // MidPercentReferenceLevel: specify the mid percent reference leves as a percentage, default value of N is 50.
     // Tolerance: define the tolerance value as real scaler value, where default value of M is 2.0.
-    // StateLevels:  define the lower and upper state levels as two element real vector. 
-    // fig: specify the logical input value to display figure as one of 'on' or 'off', where the default input in 'off'.
-    // w: returns a vector of difference between the mid-crossings of the initial and final transitions of each positive-polarity pulse found in the input signal.
-    // initialcross: returns a vector of initial cross values of bilevel waveform transitions X.
-    // finalcross: returns a vector of final cross values of bilevel waveform transitions X.
+    // StateLevels:  define the lower and upper state levels as two element real vector.
+    // fig: specify the logical input value to display figure as one of 'on' or 'off', where the default input in 'off'. 
+    // p: returns a vector of difference between the mid-crossings of the initial transition of each positive-polarity pulse and the next positive-going transition
+    // initialcross: returns a vector of initial cross values of bilevel waveform transitions X
+    // finalcross: returns a vector of final cross values of bilevel waveform transitions X
+    // nextcross: returns a vector of next cross values of bilevel waveform transitions X
     // midreference: return mid reference value corrosponding to mid percenr reference value.
     
     // Examples
     // x=[1.2, 5, 10, -20, 12]
     //t=1:length(x)
-    //w=pulsewidth(x, t) 
+    //p=pulseperiod(x, t) 
     // See also
     // Authors
     // Jitendra Singh
   
       
   // run statelevels and midcross function before running risetime function.  
-  
-        if or(type(x)==10) then
+
+      if or(type(x)==10) then
     error ('Input arguments must be double.')
 end 
- 
-    
+     
     if  length(varargin)==0 then
    varargin=varargin;
     end
@@ -72,8 +72,8 @@ index_on=[];
 if (~isempty(sindex)) then
         for j=1:length(sindex)
             select convstr(varargin(sindex(j)), 'u') // validating input variable names
-            case {'STATELEVELS'} 
-                
+            case {'STATELEVELS'}  
+                 
                    if length(varargin) <=sindex(j) then
                       error(strcat(['parameter StateLevels required a value']));
                   end
@@ -90,10 +90,9 @@ if (~isempty(sindex)) then
                       
                     error('Expected STATELEVELS to be one of these types: double, Instead its type was char.')
                 end
-                
-                                                
+                                              
                 case {'MIDPERCENTREFERENCELEVEL'} 
-                  
+                 
                      if length(varargin) <=sindex(j) then
                       error(strcat(['parameter MidPercentRefernceLevel required a value.'])); 
                   end
@@ -105,13 +104,13 @@ if (~isempty(sindex)) then
                                 
                   elseif type(varargin(sindex(j)+1))==10 then                     
                     error('Expected MidPercentRefernceLevel to be one of these types: double, Instead its type was char.')  
-                end
-                                 
+                end    
                     
                              
                case {'TOLERANCE'} 
-                   
+                 
                             if length(varargin) <=sindex(j) then
+                                
                       error(strcat(['parameter Tolerance required a value"]));
                  
                   elseif type(varargin(sindex(j)+1))==1 then
@@ -125,7 +124,7 @@ if (~isempty(sindex)) then
                       
                     error('Expected Tolerance to be one of these types: double, Instead its type was char.');
                 end  
-                
+                  
                    
                case {'FIG'}
                 
@@ -233,7 +232,7 @@ if (~isempty(sindex)) then
 // 
 
 if length(index_on)>0 then
-    varargin(index_on)='OFF';    
+   varargin(index_on)='OFF';    
 end
 
 
@@ -254,7 +253,8 @@ end
  final_pos=[];
   int_neg=[];
   final_neg=[]; 
- 
+ nextcross_pos=[];
+nextcross_neg=[];
 
 if length(crossval)>=2 then
 
@@ -274,6 +274,19 @@ else
     
 end
 
+
+
+if length(int_pos)>=2 then
+  nextcross_pos=int_pos(2:$);
+end
+
+if length(int_neg)>=2 then
+   nextcross_neg=int_neg(2:$); 
+   end  
+
+
+
+
 if length(int_pos)>length(final_pos) then
     int_pos=int_pos(1:($-1))
 elseif length(int_neg)>length(final_neg) then
@@ -281,29 +294,56 @@ elseif length(int_neg)>length(final_neg) then
     end
 
 
-end
+
+
+
+
+ if length(int_pos)>length(nextcross_pos) then
+     int_pos=int_pos(1:($-1))
+
+     end
+ if length(final_pos)>length(nextcross_pos)
+     final_pos=final_pos(1:($-1))
+   
+ end
  
- //////////////////////////////////////////////////////////////////////////////////////////
+ if length(int_neg)>length(nextcross_neg) then
+      int_neg=int_neg(1:($-1));
+      end
+  if length(final_neg)>length(nextcross_neg) then
+      final_neg=final_neg(1:($-1));
+ end
+ 
+
+end
+
   
-w=[];
-         
-      if pol=='POSITIVE' then
-          w=final_pos-int_pos;
-          initialcross=int_pos;
-          finalcross=final_pos;
-      else
-          w=final_neg-int_neg;
-          initialcross=int_neg;
-          finalcross=final_neg;
+p=[];
           
+      if pol=='POSITIVE' then  // checking the input variable polarity
+       
+          p= nextcross_pos-int_pos;
+          
+         
+              initialcross=int_pos;
+          finalcross=final_pos;
+          nextcross=nextcross_pos;             
+     else
+      p= nextcross_neg-int_neg;
+          
+         
+              initialcross=int_neg;
+          finalcross=final_neg;
+          nextcross=nextcross_neg;             
+    
+
       end
  
 midreference=midref; // return midreference value
 
    if fig=='ON' then   // if the defined output is only 1, the it will provide the graphical representation of                          //levels
        
-
-      if length(w)==0 then
+      if length(p)==0 then
           
     plot(t,x, 'LineWidth',1, 'color', 'black')
      // xtitle('', 'Time (second)','Level (Volts)' );
@@ -334,11 +374,16 @@ midreference=midref; // return midreference value
   
        plot(t,midreference * ones(1, length(t)),'-g', 'LineWidth',0.5)
      
-    rects=[initialcross; levels(2)*ones(w); w; (levels(2)-levels(1))*ones(w)]
+     
+     //n=length(finalcross);
+     
+     
+    rects=[initialcross(1:2:$); levels(2)*ones(p(1:2:$)); p(1:2:$); (levels(2)-levels(1))*ones(p(1:2:$))]
+    
 
-   col=-10*ones(w);
+   col=-10*ones(p(1:2:$));
 
-    midc=[initialcross, finalcross];
+    midc=[nextcross, initialcross, finalcross];
     midcross=gsort(midc, 'c','i' )
  
      plot(midcross, midreference*ones(midcross), "r*", 'MarkerSize',15);
@@ -362,7 +407,7 @@ midreference=midref; // return midreference value
      ylabel("Level (Volts)", "fontsize",3, "color", "black" )  
        
 
-     legends(["pulsewidth"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;3], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], opt='?')
+     legends(["pulse period"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;5], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], opt='?')
 
    end    
    end  

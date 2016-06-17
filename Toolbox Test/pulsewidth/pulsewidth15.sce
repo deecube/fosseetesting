@@ -35,7 +35,8 @@ x=[0.0;
 ]
 fs=4e6;
 t=1/fs;
-[d initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels',[0 1], 'Tolerance',3,'fig', 'on' )
-evels',0, 'fig', 'on' )
+[d initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels',[0 1], 'Tolerance',3,'MidPercentReferenceLevel', 70,'fig', 'on' )
+disp(midreference)
 //output
 //Fig
+//0.7
