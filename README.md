@@ -20,7 +20,8 @@
 ####isminphase
 ####dutycycle
 ####phasedelay
-
+####pulsewidth
+####pulseperiod
 
 
 
