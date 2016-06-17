@@ -37,14 +37,14 @@ fs = 4e6;
 pulse = x(1:30);
 wavef = [pulse;pulse;pulse];
 t = (0:length(wavef)-1)/fs;
-[d initialcross finalcross nextcross midreference]=dutycycle(wavef, t);
+[d initialcross finalcross nextcross midreference]=pulseperiod(wavef, t);
 disp(d);
 disp(initialcross);
 disp(nextcross);
 disp(midreference);
 plot(t,wavef);
 //output
-//  0.2002094    0.2002094  
+// 0.0000075    0.0000075  
 // 
 //    0.0000031    0.0000106  
 // 
