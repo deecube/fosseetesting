@@ -35,8 +35,7 @@ x=[0.0;
 ]
 fs=4e6;
 t=1/fs;
-[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',0, 'fig', 'on' )
-evels',0, 'fig', 'on' )
+[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',0, 'fig', 'on' );
 //output
 // !--error 10000 
 //Expected STATELEVELS to be of size 1x2

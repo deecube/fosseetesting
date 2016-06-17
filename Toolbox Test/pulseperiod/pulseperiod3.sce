@@ -1,3 +1,4 @@
+//check o/p when i/p is pulseex.m and sampling frequency
 x=[0.0;
 0.010753342790922;
 0.0366777002919017;
@@ -33,8 +34,8 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
+fs=4e6;
+d=pulseperiod(x,fs);
 disp(d);
 //output
-//  0.3001342  
- 
+//0.0000050

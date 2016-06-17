@@ -33,8 +33,14 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
+fs=4e6;
+[d,initcross,fincross]= pulseperiod(x);
 disp(d);
+disp(initcross);
+disp(fincross);
 //output
-//  0.3001342  
- 
+//  20.011987  
+// 
+//    13.495979  
+// 
+//    19.50226  

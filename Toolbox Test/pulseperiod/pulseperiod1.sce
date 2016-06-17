@@ -33,8 +33,21 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
+fs = 4e6;
+pulse = x(1:30);
+wavef = [pulse;pulse;pulse];
+t = (0:length(wavef)-1)/fs;
+[d initialcross finalcross nextcross midreference]=dutycycle(wavef, t);
 disp(d);
+disp(initialcross);
+disp(nextcross);
+disp(midreference);
+plot(t,wavef);
 //output
-//  0.3001342  
- 
+//  0.2002094    0.2002094  
+// 
+//    0.0000031    0.0000106  
+// 
+//    0.0000106    0.0000181  
+// 
+//    2.5176834  

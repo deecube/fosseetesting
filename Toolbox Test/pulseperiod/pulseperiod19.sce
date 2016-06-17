@@ -33,8 +33,10 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
-disp(d);
+fs=4e6;
+t=1/fs;
+w=pulseperiod (x, t, 'Polarity', 'positive');
+disp(w);
 //output
-//  0.3001342  
+//80047949.  
  

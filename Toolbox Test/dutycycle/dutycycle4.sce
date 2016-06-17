@@ -1,4 +1,4 @@
-//check o/p when i/p is 
+
 //check o/p when i/p is pulseex.m and T
 x=[0.0;
 0.010753342790922;

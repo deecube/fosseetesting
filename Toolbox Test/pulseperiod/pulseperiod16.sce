@@ -33,8 +33,12 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
-disp(d);
+fs=4e6;
+t=1/fs;
+[d initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels',0, 'fig', 'on' );
 //output
-//  0.3001342  
- 
+//!--error 10000 
+//Expected STATELEVELS to be of size 1x2
+//at line     170 of function midcross called by :  
+//at line     245 of function pulseperiod called by :  
+//evels',0, 'fig', 'on' )

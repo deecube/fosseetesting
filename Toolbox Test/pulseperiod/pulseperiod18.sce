@@ -33,8 +33,23 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-d=dutycycle(x);
+fs=4e6;
+t=1/fs;
+[d initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels',[0 3],'Tolerance',3);
 disp(d);
+disp(initialcross);
+disp(finalcross);
+disp(nextcross);
+disp(midreference);
+
 //output
-//  0.3001342  
- 
+//
+//    80055795.  
+// 
+//    49162178.  
+// 
+//    74822924.  
+// 
+//    1.292D+08  
+// 
+//    1.5  
