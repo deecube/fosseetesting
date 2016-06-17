@@ -1,5 +1,3 @@
-//check o/p when i/p is 
-//check o/p when i/p is pulseex.m and T
 x=[0.0;
 0.010753342790922;
 0.0366777002919017;
@@ -35,9 +33,9 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-T=1/4e6;
-d=dutycycle(x,T);
-disp(d);
+fs=4e6;
+t=1/fs;
+[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',[0 3],'Tolerance',3, 'fig', 'on' )
+evels',0, 'fig', 'on' )
 //output
-//0.3001342  
- 
+//Fig
