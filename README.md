@@ -1,18 +1,28 @@
 # Fossee
 #Signal Processing Toolbox
+
+##Implemented Functions
+####convmtx
+####eqtflength
+####mag2db
+####pow2db
+####rms
+####tf2zp
+
 # Test Cases for functions :
 ####ac2poly
 ####poly2ac
-
+####udecode
 ####midcross
-
+####uencode
 ####slewrate
 ####levinson
 ####isminphase
-
-
 ####dutycycle
 ####phasedelay
+
+
+
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
