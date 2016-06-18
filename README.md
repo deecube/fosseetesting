@@ -12,9 +12,9 @@
 # Test Cases for functions :
 ####ac2poly
 ####poly2ac
-####udecode
+
 ####midcross
-####uencode
+
 ####slewrate
 ####levinson
 ####isminphase
@@ -22,7 +22,9 @@
 ####phasedelay
 ####pulsewidth
 ####pulseperiod
-
+####statelevels
+####pulsesep
+####falltime
 
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
@@ -33,7 +35,6 @@
 
 ## Moved to documentation
 ####ac2rc
-####statelevels
 ####lsf2poly
 ####mag2db
 ####rlevinson
@@ -54,3 +55,5 @@
 ####isstable
 ####stmcb
 ####peak2peak
+####udecode
+####uencode
