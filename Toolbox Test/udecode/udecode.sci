@@ -1,7 +1,7 @@
 function y=udecode(u,n,v,saturatemode)
 //Decodes the input uniformly quantized values
 //Calling Sequence
-//y=udecode(u,n,v,'saturatemode')
+//y=uencode(u,n,v,'saturatemode')
 //Parameters
 //u
 //A vector, matrix or n-dimensional array of integers
@@ -27,7 +27,9 @@ function y=udecode(u,n,v,saturatemode)
 //Author
 //Ankur Mallick
 //[1] International Telecommunication Union. General Aspects of Digital Transmission Systems: Vocabulary of Digital Transmission and Multiplexing, and Pulse Code Modulation (PCM) Terms. ITU-T Recommendation G.701. March, 1993.
-//function accepts real values only due to limitations of int8
+//See also
+//uencode
+//floor
     funcprot(0);
     if(argn(2)<4)
         saturatemode='saturate';
@@ -46,15 +48,17 @@ function y=udecode(u,n,v,saturatemode)
     elseif(type(u)~=8)
         error('Input value must be an integer');
     else
-        if(sum(u-abs(u))~=0)
+        if(inttype(u)==1|inttype(u)==2|inttype(u)==4)
             u=u+2^(n-1);   //Converting signed to unsigned
         end
         if(saturatemode=='wrap')
             u=pmodulo(double(u),2^n);
         end
+        u(u<0)=0;
+        u(u>(2^n-1))=2^n-1;
         L=2*v/(2^n);
         y=L*double(u)-v;
-        y(y<-v)=-v;
-        y(y>v)=v;
+//        y(y<-v)=-v;
+//        y(y>v)=v;
     end
 endfunction
