@@ -192,7 +192,7 @@ if (~isempty(sindex)) then
          case{'OFF'}
                        
                 case {'TOLERANCE'}
-                   disp('jitend')
+                   //disp('jitend')
             if length(varargin) <=sindex(j) then
                       error(strcat(['parameter Tolerance required a value"]));
                  

@@ -4,5 +4,5 @@ x=['a' 'a';'a' 'a'];
 //output
 // !--error 10000 
 //Input arguments must be double.
-//at line      49 of function pulseperiod called by :  
-//[d]=pulsesep(x);
+//at line      49 of function falltime called by :  
+//[d]=falltime(x);
