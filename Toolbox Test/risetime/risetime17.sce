@@ -9,3 +9,4 @@ disp(y);
 
 
 //corresponding MATLAB o/p
+//Not enough input arguments.

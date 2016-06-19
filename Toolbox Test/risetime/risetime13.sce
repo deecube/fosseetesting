@@ -8,3 +8,8 @@ disp(d);
 //at line     173 of function statelevels called by :  
 //at line      51 of function risetime called by :  
 //[d]=risetime(x);
+
+//corresponding matlab o/p
+//..d =
+
+//   Empty matrix: 1-by-0
