@@ -5,13 +5,7 @@ den_ord=3;
 disp(num);
 disp(den);
 //output
-// !--error 43 
-//Not implemented in scilab...
-//at line       8 of function %s_i_c called by :  
-//at line      10 of function prony called by :  
-//[num,den]=prony(impr,num_ord,den_ord);
-
-
-//corresponding MATLAB o/p
-//Error using signal.internal.sigcheckfloattype (line 52)
+//!--error 10000 
 //Input H in prony must be double/single, instead it was char.
+//at line       6 of function prony called by :  
+//[num,den]=prony(impr,num_ord,den_ord);
