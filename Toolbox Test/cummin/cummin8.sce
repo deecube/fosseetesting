@@ -1,4 +1,4 @@
-//check o/p when i/p is a vector containing imaginary values
+//check o/p when i/p is a matrix containing imaginary values
 v =[8     9+2*%i     1     10;     6     1     3     6 ;   10    10 1 12];
 m=cummin(v);
 disp(m);
