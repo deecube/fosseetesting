@@ -25,6 +25,7 @@
 ####statelevels
 ####pulsesep
 ####falltime
+####isstable
 ####var
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
@@ -52,7 +53,6 @@
 ####rc2lar
 ####rc2ac
 ####taylorwin
-####isstable
 ####stmcb
 ####peak2peak
 ####udecode
