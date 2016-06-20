@@ -59,3 +59,4 @@
 ####uencode
 ####gaussdesign
 ####prony
+####rcosdesign
