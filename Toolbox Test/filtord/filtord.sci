@@ -1,3 +1,24 @@
+//filtord Filter order
+//Calling Syntax
+//n = filtord(b,a) 
+//n = filtord(sos) 
+//n = filtord(d)
+//n = filtord(b,a) returns
+//the filter order, n, for the causal rational
+//system function specified by the numerator coefficients, b,
+//and denominator coefficients, a.
+//n = filtord(sos) returns
+//the filter order for the filter specified by the second-order sections
+//matrix, sos. sos is a K-by-6
+//matrix. The number of sections, K, must be greater
+//than or equal to 2. Each row of sos corresponds
+//to the coefficients of a second-order filter. The ith
+//row of the second-order section matrix corresponds to [bi(1)
+//bi(2) bi(3) ai(1) ai(2) ai(3)].
+//n = filtord(d) returns
+//the filter order, n, for the digital filter, d.
+//Use the function designfilt to
+//generate d.
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 function m=filtord(varargin)
