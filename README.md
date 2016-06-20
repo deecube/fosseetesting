@@ -27,6 +27,7 @@
 ####falltime
 ####isstable
 ####var
+####filtord
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
@@ -60,3 +61,4 @@
 ####gaussdesign
 ####prony
 ####rcosdesign
+####icceps
