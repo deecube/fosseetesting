@@ -25,7 +25,7 @@
 ####statelevels
 ####pulsesep
 ####falltime
-
+####var
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
@@ -57,3 +57,5 @@
 ####peak2peak
 ####udecode
 ####uencode
+####gaussdesign
+####prony
