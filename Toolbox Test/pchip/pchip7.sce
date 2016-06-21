@@ -15,13 +15,13 @@ disp(p);
 //corresponding MATLAB o/p
 
 //MATLAB gives the following error
-Warning: Out of range or non-integer values
-truncated during conversion to character. 
-> In ppval (line 66)
-  In pchip (line 86) 
-Warning: Out of range or non-integer values
-truncated during conversion to character. 
-> In ppval (line 66)
-  In pchip (line 86) 
+//Warning: Out of range or non-integer values
+//truncated during conversion to character. 
+//> In ppval (line 66)
+//  In pchip (line 86) 
+//Warning: Out of range or non-integer values
+//truncated during conversion to character. 
+//> In ppval (line 66)
+//  In pchip (line 86) 
   
   // and then returns p as 1X601 vector
