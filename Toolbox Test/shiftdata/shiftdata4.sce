@@ -1,7 +1,7 @@
-
+// i/p arg dim is 1
 x=[8 1 6 3 5 7 4 9 2];
-dim=2;
-[x,perm,nshifts] = shiftdata(x,1);
+dim=1;
+[x,perm,nshifts] = shiftdata(x,dim);
 disp(x);
 disp(perm);
 disp(nshifts);
