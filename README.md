@@ -32,8 +32,9 @@
 ####cummax
 ####pmusic
 ####pchip
-####
-####
+####shiftdata
+####unshiftdata
+####enbw
 
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
