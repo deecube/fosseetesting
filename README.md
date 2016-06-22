@@ -35,7 +35,9 @@
 ####shiftdata
 ####unshiftdata
 ####enbw
-
+####intfilt
+####latc2tf
+####lpc
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
 
