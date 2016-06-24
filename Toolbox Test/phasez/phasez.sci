@@ -1,4 +1,26 @@
-//Author: Parthasarathi Panda
+//phasez Phase response of digital filter
+//Calling Syntax
+//[phi,w] = phasez(b,a,n)
+//[phi,w] = phasez(sos,n)
+///[phi,w] = phasez(b,a,n) returns
+//the n-point unwrapped phase response vector, phi,
+//in radians and the frequency vector, w, in radians/sample
+//for the filter coefficients specified in b and a.
+//The values of the frequency vector, w, range from
+//0 to π. If n is omitted,
+//the length of the phase response vector defaults to 512. For best
+//results, set n to a value greater than the filter
+//order.
+//[phi,w] = phasez(sos,n) returns the unwrapped
+//phase response for the second order sections matrix, sos. sos is
+//a K-by-6 matrix, where the number of sections, K,
+//must be greater than or equal to 2. If the number of sections is less
+//than 2, phasez considers the input to be the
+//numerator vector, b. Each  row of sos corresponds
+//to the coefficients of a second-order (biquad) filter. The ith
+//row of the sos matrix corresponds to [bi(1)
+//bi(2) bi(3) ai(1) ai(2) ai(3)].
+////Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 function [phi, varargout]=phasez(varargin)
     //cas variable is 2 if sos form is involved and 1 if direct rational form is given
