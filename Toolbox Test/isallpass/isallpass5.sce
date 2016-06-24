@@ -5,3 +5,4 @@ tol=50;
 flag = isallpass(b,a,tol);
 disp(flag);
 //output
+// 1 
