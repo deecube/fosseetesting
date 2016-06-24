@@ -3,3 +3,6 @@ z=[-1;-1;-1;-1;-1;-1];
 
 flag=isminphase(z,p);
 disp(flag);
+//output
+
+//    0.  
