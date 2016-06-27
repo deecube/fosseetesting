@@ -41,6 +41,15 @@
 ####fftfilt
 ####latcfilt
 ####phasez
+####peig
+####rooteig
+####corrmtx
+####islinphase
+####ismaxphase
+####isallpass
+####impzlength
+####polyscale
+
 ## Were erroneous but I have coded them from scratch to resolve issues,need to retest
 ####tf2zpk (resolved dependency issue)
 
