@@ -2,6 +2,7 @@
 x=[12 3 4 5 6 7 8];
 dim=-2;
 [x,perm,nshifts]=shiftdata(x,dim);
+disp(x);
 disp(perm);
 //output
 //!--error 21 
