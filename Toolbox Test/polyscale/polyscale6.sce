@@ -1,6 +1,4 @@
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/polyscale.sci');
+// no i/p args are passed to the function
 y=polyscale();
 disp(y);
 //output

@@ -19,17 +19,15 @@ function  b = polyscale(a,alpha)
 // polystab
 //
 // Author
-// Parthe Pandit
+//Debdeep Dey
 
 //errcheck1
-if(type(a)>1 | min(size(a))>1)
+if(min(size(a))>1) then
 	error('Input polynomial must be an array')    
 end
-    multiplier = zeros(a);
-    n = length(a);
-    for i = 1:length(multiplier)
-        multiplier(i) = alpha^(n - i + 1);
-    end
-    b = multiplier.*a;
+if type(a)==10 then
+    error("Input cannot be of type char");
+end
+   b = a .* (alpha .^ (0:length(a)-1));
 
 endfunction
