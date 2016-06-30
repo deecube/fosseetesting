@@ -1,34 +1,82 @@
-function [a,e,k] = levinson(r,n)
-// Levinson-Durbin recurrsion
-//
-// Calling Sequence
-// a = levinson(r,n)
-// [a,e] = levinson(r,n)
-// [a,e,k] = levinson(r,n)
-//
-// Parameters
-// r: The input autocorrelation sequence. If r is a matrix, each column of r is treated as a separate signal
-// n: The order of prediction filter to be estimated for the given autocorrelation sequence. n must be less than length of r
-// a: coeffients of AR filter. a(1) = 1
-// e: prediction error of AR filter
-// k: reflection coefficients for the AR model
-//
-// Description
-// This function solves the Levinson-Durbin recurrsion to obtain the AR filter model of specified order
-// The filter e/(a(1) + a(2)z + a(3)z^2 .. a(n)z^n-1) is the output filter
-// This is a wrapper function  of the scilab function lev. Re-written in the signal processing toolbox for the sake of completeness
-//
-// Examples
-//
-// See also
-//
-// Authors
-// Parthe Pandit
-// 
+//levinson levinson- durbin algorithm
+//calling syntax
+//a = levinson(r)
+//a = levinson(r,n)
+//[a,e] = levinson(r,n)
+//[a,e,k] = levinson(r,n)
 
-// Function wrapper calling lev(.)
-[a,e,k] = lev(r)
-a = a(n,:);
-e = e(n,:);
-k = k(n,:);
+//The Levinson-Durbin recursion is an algorithm for finding an
+//all-pole IIR filter with a prescribed deterministic
+//autocorrelation sequence. It has applications in filter design, coding,
+//and spectral estimation. The filter that levinson produces
+//is minimum phase.
+
+// Author Debdeep Dey
+function [a, v_f, ref_f] = levinson (acf, p)
+
+if ( argn(2)<1 )
+    error("Too few input arguments");
+    //  elseif( length(acf)<2 )
+    //    error( "levinson: arg 1 (acf) must be vector of length >1\n");
+elseif ( argn(2)>1 & ( ~isscalar(p) | fix(p)~=p ) )
+    error( "levinson: arg 2 (p) must be integer >0\n");
+elseif (isempty(acf))
+    error("R cannot be empty");
+else
+    if ((argn(2) == 1)|(p>=length(acf)))
+        p = length(acf) - 1;
+    end
+    if( size(acf,1)==1 & size(acf,2)>1 ) then
+        acf=acf(:);
+        
+    end     // force a column vector
+    if size(acf,1)>1 then // handles matrix i/p
+        
+        acf=acf';
+        a=acf;
+        rows=size(acf,1);
+        for i=1:rows
+            acf_temp=acf(i,:);
+            acf_temp=acf_temp(:);
+            p=length(acf_temp)-1;
+            //disp(acf_temp);
+            if argn(1) < 3 & p < 100
+                
+                ////   Kay & Marple Eqn (2.39)
+                R = toeplitz(acf_temp(1:p), conj(acf_temp(1:p)));
+                an = R \ -acf_temp(2:p+1);
+                an= [ 1, an.' ];
+                v(i,:)= real( an*conj(acf_temp(1:p+1)) );
+                a(i,:)=an;
+                an=[];
+                
+            else
+                
+                ////   Kay & Marple Eqns (2.42-2.46)
+                
+                ref = zeros(p,1);
+                g = -acf_temp(2)/acf_temp(1);
+                
+                an = [ g ];
+                v= real( ( 1 - g*conj(g)) * acf_temp(1) );
+                ref(1) = g;
+                for t = 2 : p
+                    g = -(acf_temp(t+1) + an * acf_temp(t:-1:2)) / v;
+                    an = [ an+g*conj(an(t-1:-1:1)), g ];
+                    v = v * ( 1 - real(g*conj(g)) ) ;
+                    ref(t) = g;
+                end
+                v_f(i,:)=v;
+                v=[];
+                ref_f(:,i)=ref;
+                an = [1, an];
+                a(i,:)=an;
+                an=[];
+            end //end if
+        end  //end for
+    end
+end
+
+
+
 endfunction

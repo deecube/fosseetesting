@@ -1,12 +1,18 @@
 //check o/p for a given matrix
-r=[1 2 4;2 3 4; 4 5 5];
+r=[1 2 4;2 3 1; 4 5 2];
 n=2;
-a=levinson(r,n);
+[a,e,k]=levinson(r,n);
 disp(a);
+disp(e);
+disp(k);
 //output
-//!--error 60 
-//Wrong size for argument: Incompatible dimensions.
-//at line      21 of function lev called by :  
-//at line      30 of function levinson called by :  
-//levinson(r)
- 
+//   1.  - 2.           0.         
+//    1.  - 1.8          0.2        
+//    1.  - 0.1333333  - 0.4666667  
+// 
+//  - 3.         
+//  - 2.4        
+//    2.9333333  
+// 
+//  - 2.  - 1.5  - 0.25       
+//    0.    0.2  - 0.4666667  

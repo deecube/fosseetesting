@@ -1,11 +1,13 @@
-//check o/p for a given matrix with i/p parameters as matrix and order n
+//check o/p for a given vector with i/p parameters as vector and order n
 r=[1 34 4];
-[a,e]=levinson(r,2);
+[a,e,k]=levinson(r,2);
 disp(a);
+disp(e);
+disp(k);
 //output
-// !--error 21 
-//Invalid index.
-//at line      32 of function levinson called by :  
-//[a,e]=levinson(r,2);
-//at line       3 of exec file called by :    
-//son\levinson3.sce', -1
+// 1.  - 0.0883117  - 0.9974026  
+// 
+//  - 5.9922078  
+//
+//- 34.        
+//  - 0.9974026  
