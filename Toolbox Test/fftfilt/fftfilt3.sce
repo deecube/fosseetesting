@@ -5,11 +5,4 @@ n=10;
 y=fftfilt(b,x);
 disp(y);
 ////output
-//!--error 4 
-//Undefined variable: L
-//at line     157 of function fftfilt called by :  
-//y=fftfilt(b,x);
-
-
-//corresponding MATLAB o/p
-//0.1000
+// 0.1

@@ -4,8 +4,5 @@ b=[];
 y=fftfilt(b,x);
 disp(y);
 //output
-//   []
 
-
-//corresponding MATLAB o/p
-// 0     0     0     0     0     0     0
+//    0.    0.    0.    0.    0.    0.    0. 
