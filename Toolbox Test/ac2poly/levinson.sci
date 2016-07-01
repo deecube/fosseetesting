@@ -5,11 +5,11 @@
 //[a,e] = levinson(r,n)
 //[a,e,k] = levinson(r,n)
 
-//The Levinson-Durbin recursion is an algorithm for finding an
-//all-pole IIR filter with a prescribed deterministic
-//autocorrelation sequence. It has applications in filter design, coding,
-//and spectral estimation. The filter that levinson produces
-//is minimum phase.
+// where 
+// a is the coefficients of a length(r)-1 order autoregressive
+//linear process
+//e is the prediction error when order is n
+// k is a column vector containing the reflection coefficients of length n
 
 // Author Debdeep Dey
 function [a, v_f, ref_f] = levinson (acf, p)
@@ -30,7 +30,7 @@ else
         acf=acf(:);
         
     end     // force a column vector
-    if size(acf,1)>1 then // handles matrix i/p
+    if size(acf,1)>=1 then // handles matrix i/p
         
         acf=acf';
         a=acf;
@@ -43,7 +43,7 @@ else
             if argn(1) < 3 & p < 100
                 
                 ////   Kay & Marple Eqn (2.39)
-                disp("Hrer")
+                
                 R = toeplitz(acf_temp(1:p), conj(acf_temp(1:p)));
                 an = R \ -acf_temp(2:p+1);
                 an= [ 1, an.' ];

@@ -4,8 +4,7 @@ r = 'has been';
 disp(a);
 disp(efinal);
 //output
-// !--error 4 
-//Undefined variable: v
-//at line      58 of function levinson called by :  
-//at line      41 of function ac2poly called by :  
+//!--error 10000 
+//Input autocorrelation sequence needs to be of type double
+//at line      24 of function ac2poly called by :  
 //[a,efinal] = ac2poly(r);
