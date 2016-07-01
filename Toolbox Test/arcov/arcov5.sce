@@ -1,4 +1,4 @@
-//check o/p when i/p is a vector
+//check o/p when i/p is a vector containing imaginary elements
 y=[1*%i 2 3 4 5 6 7 8 9 0 -2 3 4 5 6];
 arcoeffs = arcov(y,4)
 disp(arcoeffs);

@@ -1,5 +1,5 @@
 
-//too many i/p args are passed to the functio
+//too many i/p args are passed to the function
 scale=2;
 fs = 1000;t = 0:1/fs:2;
 //x = vco(sin(2*pi*t),[10 490],fs);

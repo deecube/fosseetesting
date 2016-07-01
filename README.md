@@ -8,6 +8,8 @@
 ####pow2db
 ####rms
 ####tf2zp
+####levinson
+####polyscale
 
 # Test Cases for functions :
 ####ac2poly
@@ -86,3 +88,4 @@
 ####rssq
 ####strips
 ####levinson
+####polyscale
