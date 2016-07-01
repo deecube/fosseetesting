@@ -4,9 +4,9 @@ efinal = 0.2;           // Step prediction error
 r = poly2ac(a,efinal);   // Autocorrelation sequence
 disp(r);
 //Output
-// !--error 4 
-//Undefined variable: rlevinson
+//!--error 10000 
+//Input arguments must be numeric.
+//at line      31 of function rlevinson called by :  
 //at line      41 of function poly2ac called by :  
-//r = poly2ac(a,efinal);   // Autocorrelation seque
-//at line       5 of exec file called by :    
-//ly2ac\poly2ac6.sce', -1
+//r = poly2ac(a,efinal);  
+//

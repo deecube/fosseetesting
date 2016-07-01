@@ -1,12 +1,11 @@
 //o/p when null matrix is given as i/p 
 a = [0,0,0,0,0,0];
-efinal = 0.2;           // Step prediction error
-r = poly2ac(a,efinal);   // Autocorrelation sequence
+efinal = 0.2;          
+r = poly2ac(a,efinal); 
 disp(r);
 //Output
-// !--error 10000 
-//Input polynomial has to be a 1-dimensional array
-//at line      35 of function poly2ac called by :  
-//r = poly2ac(a,efinal)   // Autocorrelation sequen
-//at line       4 of exec file called by :    
-//ly2ac\poly2ac1.sce', -1
+// !--error 27 
+//Division by zero...
+//at line      44 of function rlevinson called by :  
+//at line      41 of function poly2ac called by :  
+//r = poly2ac(a,efinal);

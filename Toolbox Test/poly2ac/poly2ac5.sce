@@ -1,8 +1,8 @@
 //o/p when null matrix is given as i/p 
 a = [0,0,0,0,0,0];
 z=[4];
-efinal = 0.2;           // Step prediction error
-r = poly2ac(a,efinal,z);   // Autocorrelation sequence
+efinal = 0.2;           
+r = poly2ac(a,efinal,z); 
 disp(r);
 //Output
 //r = poly2ac(a,efinal,z);   // Autocorrelation seq

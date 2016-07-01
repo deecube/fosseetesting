@@ -4,3 +4,7 @@ r = [0,0,0];
 disp(a);
 disp(efinal);
 // Output
+//  1.    0.    0.  
+// 
+//    0.  
+// 

@@ -63,7 +63,7 @@ end
       for i=n-1:-1:1 // start levinson down
           
          ee=a($)
-               
+           
           a = (a-Kr(i+1)*flipdim(a,2,1))/(1-Kr(i+1)^2);
                                                
            a=a(1:$-1)
@@ -83,7 +83,7 @@ end
             e=e';
  
  if  abs(a(2))==1 then
-           e1=%inf
+           e1=%nan
  else
        e1=e(1)/(1-abs(a(2)^2));     
  end
