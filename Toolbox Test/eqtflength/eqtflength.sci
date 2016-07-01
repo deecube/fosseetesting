@@ -18,13 +18,16 @@ function [b,a,N,M] = eqtflength(b,a)
 
 //Author
 //Debdeep Dey
-    if(argn(2)~=2)
+if(argn(2)~=2)
         error('Incorrect number of input arguments');
     elseif(length(a)==0|max(abs(a))==0)
         error('Division by zero not allowed');
+    elseif(type(b)==10 | type(a)==10)
+        b=b;
+        a=a;
     else
-        a=a(:)';
-        b=b(:)';
+        a=a(:).';
+        b=b(:).';
         a=[a,zeros(1,max(0,length(b)-length(a)))];
         b=[b,zeros(1,max(0,length(a)-length(b)))];
         ai=find(a~=0);
