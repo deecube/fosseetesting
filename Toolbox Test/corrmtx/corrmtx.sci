@@ -97,13 +97,14 @@ function [X,varargout]= corrmtx(x,m,varargin)
     else
         method = varargin(1);
     end
+    x = x(:);
     n = length(x);
-    x = matrix(x,1,n);
-    x_padded = [zeros(1,m),x,zeros(1,m)];
-    X = zeros( (n + m),(m + 1) );
-    for i = 1:size(X,1)
-        X(i,:) = x_padded(m+i:-1:i);
-    end
+    
+//    x_padded = [zeros(1,m),x,zeros(1,m)];
+//    X = zeros( (n + m),(m + 1) );
+//    for i = 1:size(X,1)
+//        X(i,:) = x_padded(m+i:-1:i);
+//    end
     
     select method
     case "autocorrelation" then
@@ -115,7 +116,8 @@ function [X,varargout]= corrmtx(x,m,varargin)
     case 'covariance' then
         X = X(m+1:n,:);
     case 'modified' then
-        X = [X(m+1:n,:)  ; conj(mtlb_fliplr(X(m+1:n,:)))];
+        Xtemp = conj(X(:,$:-1:1));
+   X = [X;Xtemp]./sqrt(2);
     else X = X;
 end
 

@@ -17,13 +17,13 @@ function typ=firtype(b)
     sym=(b-b($:-1:1))*(b-b($:-1:1))';//zero if symmetrical
     antisym=(b+b($:-1:1))*(b+b($:-1:1))';//zero if antisymmetrical
     if (sym==0) then
-        if (m%2==1) then
+        if (pmodulo(m,2)==1) then
             typ=1;
         else
             typ=2;
         end
     elseif (antisym==0)
-        if (m%2==1) then
+        if (pmodulo(m,2)==1) then
             typ=3;
         else
             typ=4;
