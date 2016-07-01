@@ -1,4 +1,5 @@
 //ac2poly
+//i/p arg r is a matrix
 r = [5.0000 ;-1.5450 ;-3.9547];
 [a,efinal] = ac2poly(r);
 
