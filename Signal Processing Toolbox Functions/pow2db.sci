@@ -10,19 +10,23 @@ if(rhs~=1)
 error("Wrong number of input arguments.")
 end
 [r,c]=size(y);
-if abs(y(:))>=0 then
-    for i=1:r
-        for j=1:c
-            if abs(y(i,j))>0 then
-                ydb(i,j)=10*log10(y(i,j));
-            else 
-                ydb(i,j)=-%inf;
-            end
-        end 
-    end
+if (find(real(y(:))<0))==[] then
+    if abs(y(:))>=0 then
+     for i=1:r
+            for j=1:c
+                if abs(y(i,j))>0 then
+                    ydb(i,j)=10*log10(y(i,j));
+                else 
+                    ydb(i,j)=-%inf;
+                end
+            end 
+        end
 
+    
+    end
 else
-    error("The power value must be non-negative")
+        error("The power value must be non-negative")
 end
+
 endfunction
 
