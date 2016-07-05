@@ -6,9 +6,10 @@ disp(R);
 disp(U);
 disp(K);
 //output
-//    Inf  
-//  - Inf  
-//    Inf  
+// Nan  
+//    Nan  
+//    Nan  
+// 
  
 //    1.    1.    6.  
 //    0.    1.    7.  

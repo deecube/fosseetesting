@@ -4,11 +4,7 @@ efinal = 0.2;
 r = poly2ac(a,efinal); 
 disp(r);
 //Output
-// !--error 27 
-//Division by zero...
-//at line      44 of function rlevinson called by :  
-//at line      41 of function poly2ac called by :  
+//!--error 4 
+//Undefined variable: r
+//at line      47 of function poly2ac called by :  
 //r = poly2ac(a,efinal);
-
-
-// problem with rlevinson

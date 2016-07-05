@@ -1,7 +1,8 @@
 r=poly2ac();
 disp(r);
 //output
-// !--error 4 
-//Undefined variable: efinal
-//at line      37 of function poly2ac called by :  
+// !--error 10000 
+//Input arguments must be numeric.
+//at line      31 of function rlevinson called by :  
+//at line      41 of function poly2ac called by :  
 //r=poly2ac();

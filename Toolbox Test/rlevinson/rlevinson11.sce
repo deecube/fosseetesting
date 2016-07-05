@@ -4,19 +4,10 @@ efinal=0.3;
 r=rlevinson(x,efinal);
 disp(r);
 //output
-//!--error 27 
-//Division by zero...
-//at line      44 of function rlevinson called by :  
-//r=rlevinson(x,efinal);
-
-
-//matlab o/p
-
-//   NaN
-//   NaN
-//   NaN
-//   NaN
-//   NaN
-//   NaN
-//   NaN
-//
+//   Nan  
+//    Nan  
+//    Nan  
+//    Nan  
+//    Nan  
+//    Nan  
+//    Nan  
