@@ -7,13 +7,12 @@ disp(k);
 //output
 //
 //
+//
 //  - 1.3711343              
 //  - 0.0644328 + 1.348761i  
 //  - 0.0644328 - 1.348761i  
-// 
-//  - 1.6506292               
-//  - 0.1746854 + 1.5468689i  
-//  - 0.1746854 - 1.5468689i  
-// 
-//    2.  
-// 
+//disp(p);
+//       !--error 4 
+//Undefined variable: p
+//at line       5 of exec file called by :    
+//exec('/home/debdeep/Desktop/Toolbox Test/Toolbox Test/tf2zpk/tf2zpk6.sce', -1)

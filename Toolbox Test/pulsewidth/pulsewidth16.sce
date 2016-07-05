@@ -33,7 +33,7 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-fs=4e6;
+fs=2e6;
 t=1/fs;
 w=pulsewidth (x, t, 'Polarity', 'negative');
 disp(w);

@@ -33,9 +33,8 @@ x=[0.0;
 -0.022941402139383;
 4.97862259083664;
 ]
-fs=4e6;
-t=1/fs;
-[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',[0 3],'Tolerance',3, 'fig', 'on' )
-
+d=midcross(x);
+disp(d);
 //output
-//Fig
+//13.495979    19.50226    33.507966  
+ 

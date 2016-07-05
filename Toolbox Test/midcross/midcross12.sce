@@ -1,3 +1,4 @@
+//check o/p when i/p is pulseex.m and sampling frequency
 x=[0.0;
 0.010753342790922;
 0.0366777002919017;
@@ -34,8 +35,9 @@ x=[0.0;
 4.97862259083664;
 ]
 fs=4e6;
-t=1/fs;
-[d initialcross finalcross nextcross midreference]= dutycycle(x, t,'StateLevels',[0 3],'Tolerance',3, 'fig', 'on' )
-
+d=midcross(x,fs);
+disp(d);
 //output
-//Fig
+//
+//  0.0000031    0.0000046    0.0000081  
+ 

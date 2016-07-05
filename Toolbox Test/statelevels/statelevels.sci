@@ -32,9 +32,8 @@ function [levels, histogram, bins] = statelevels (x, varargin) // defining funct
   if or(type(x)==10) then
     error ('Input arguments must be double.')
 end 
-if (size(x,2)>1 & size(x,1)~=1) then
-    error("Input x should be a vector");
-elseif (size(x,1)>1 & size(x,2)~=1)
+if size(x,2)==1 | size(x,1)==1 then
+else
     error("Input x should be a vector");    
 end
 if length(x) < 2 then // checking the length of input datasat

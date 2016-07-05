@@ -100,11 +100,11 @@ function [X,varargout]= corrmtx(x,m,varargin)
     x = x(:);
     n = length(x);
     
-//    x_padded = [zeros(1,m),x,zeros(1,m)];
-//    X = zeros( (n + m),(m + 1) );
-//    for i = 1:size(X,1)
-//        X(i,:) = x_padded(m+i:-1:i);
-//    end
+    x_padded = [zeros(1,m),x,zeros(1,m)];
+    X = zeros( (n + m),(m + 1) );
+    for i = 1:size(X,1)
+        X(i,:) = x_padded(m+i:-1:i);
+    end
     
     select method
     case "autocorrelation" then
