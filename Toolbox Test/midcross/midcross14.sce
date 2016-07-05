@@ -35,6 +35,12 @@ x=[0.0;
 ]
 fs=4e6;
 t=1/fs;
+
 [midcrossvalue midreference]= midcross(x, t,'StateLevels',[0 3],'Tolerance',3, 'fig', 'on' )
 disp(midcrossvalue);
 disp(midreference);
+//output
+//figure
+//  49162178.    74822924.    1.292D+08  
+ 
+//    1.5  
