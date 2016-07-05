@@ -1,24 +1,18 @@
 //
-a=0.6;
+a=0.7;
 f=intfilt(4,2,a);
 disp(f);
 //output
-//!--error 10000 
-//Frequencies in F must be in range [0,1]
-//at line      74 of function intfilt called by :  
-//f=intfilt(4,2,a);
-
-
-//corresponding MATLAB o/p
-// Columns 1 through 6
 //
-//   -0.0691   -0.1099   -0.0933    0.0000    0.2879    0.5960
-//
-//  Columns 7 through 12
-//
-//    0.8545    1.0000    0.8545    0.5960    0.2879    0.0000
-//
-//  Columns 13 through 15
-//
-//   -0.0933   -0.1099   -0.0691
-//
+//         column 1 to 5
+// 
+//  - 0.0838539  - 0.1332574  - 0.1121725  - 1.790D-16    0.2924714  
+// 
+//         column  6 to 11
+// 
+//    0.6071718    0.8659186    1.    0.8659186    0.6071718    0.2924714  
+// 
+//         column 12 to 15
+// 
+//  - 1.790D-16  - 0.1121725  - 0.1332574  - 0.0838539  
+// 

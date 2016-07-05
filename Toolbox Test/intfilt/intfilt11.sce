@@ -4,7 +4,7 @@ f=intfilt(4,2*%i,a);
 disp(f);
 
 //output
-//!--error 10000 
-//Frequencies in F must be in range [0,1]
-//at line      74 of function intfilt called by :  
+// !--error 44 
+//Wrong first argument.
+//at line     164 of function intfilt called by :  
 //f=intfilt(4,2*%i,a);
