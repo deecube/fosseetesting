@@ -5,11 +5,7 @@ s=slewrate(x, t);
 disp(s)
 //output
 
-//  - 21.2    25.  
-
-
-//corresponding MATLAB o/p
-//Error using slewrate (line 68)
-//Expected X to be a vector.
- 
-
+// !--error 10000 
+//Argument X must be vector.
+//at line      52 of function slewrate called by :  
+//s=slewrate(x, t);

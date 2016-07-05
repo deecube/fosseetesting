@@ -4,6 +4,6 @@ t=1:length(x);
 s=slewrate(x, t);
 disp(s)
 //output
-//
+//- 30.    32.  
 
 

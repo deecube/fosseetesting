@@ -35,8 +35,7 @@ x=[0.0;
 ]
 fs=4e6;
 t=1/fs;
-w=pulsesep(x, t, 'Polarity', 'negative');
+w=pulseperiod (x, t, 'Polarity', 'negative');
 disp(w);
 //output
-//[]
- 
+// []

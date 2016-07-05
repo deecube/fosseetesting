@@ -35,8 +35,6 @@ x=[0.0;
 ]
 fs=4e6;
 t=1/fs;
-w=pulsesep(x, t, 'Polarity', 'negative');
+w=pulsesep(x, t, 'Polarity', 'positive');
 disp(w);
-//output
-//[]
- 
+//   56022824.  

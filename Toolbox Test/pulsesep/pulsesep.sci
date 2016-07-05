@@ -8,7 +8,7 @@ function [s, initialcross, finalcross, nextcross, midreference]= pulsesep(x, var
     // s=pulsesep (x, t, 'Polarity', pol)
     // s=pulsesep(x, t, 'MidPercentReferenceLevel', N )
     // s=pulsesep(x, t, 'Tolerance', M)
-    // s=pulsesep(x, t,'StateLevels', O)
+    // s=pulsesep(x, t,'StateLevels', [O 1])
     
     // [s initialcross finalcross nextcross midreference]=pulsesep(x)
     // [s initialcross finalcross nextcross midreference]=pulsesep(x, Fs)

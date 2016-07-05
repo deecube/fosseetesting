@@ -24,10 +24,19 @@ function [levels, histogram, bins] = statelevels (x, varargin) // defining funct
     // See also
     // Authors
     // Jitendra Singh
+    
+
+   
+    
+    
   if or(type(x)==10) then
     error ('Input arguments must be double.')
 end 
-
+if (size(x,2)>1 & size(x,1)~=1) then
+    error("Input x should be a vector");
+elseif (size(x,1)>1 & size(x,2)~=1)
+    error("Input x should be a vector");    
+end
 if length(x) < 2 then // checking the length of input datasat
   error('X must be a vector with more than one element.'); // if length of X is less 2, it will give error
 end
@@ -76,6 +85,7 @@ elseif varargin(1)~='fig' & varargin(2)~='on' | varargin(2)~='off' then
 end
  
 end
+
 
 if length(varargin)==3 then
     nbins=varargin(1);
@@ -126,6 +136,15 @@ if length(varargin)==5 then
 
 end
 
+
+    if and(x==0) then     
+        levels=zeros(1,2)
+        histogram1=13;
+        xx=zeros(1, (nbins-1));
+        histogram=[histogram1,xx];
+        bins=zeros(1,nbins);
+          
+        else
 
  if type(nbins)==10 then  // checking, if nbins if numeric aur charactr
     error ('Expected NBINS to be one of these types: double, Instead its type was char.');
@@ -285,7 +304,8 @@ end
       
       title("Histogram of the signal levels", "fontsize",3)
       end
-      end
+  end
+   end
       
       
   endfunction
