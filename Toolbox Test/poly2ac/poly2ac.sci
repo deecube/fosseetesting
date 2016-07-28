@@ -1,6 +1,6 @@
 function r = poly2ac(a,efinal)
 // Convert prediction polynomial to autocorrelation sequence.
-//
+//Run rlevinson.sci before running this
 // Calling Sequence
 // R = poly2ac(a,efinal)
 // 
@@ -12,7 +12,7 @@ function r = poly2ac(a,efinal)
 // Description
 // This function obtains the underlying autocorrelation sequence that would best fit a linear prediction filter described by the
 // denominator polynomial and the numerator scaling. The filter is H(z) = efinal/(a(1) + a(2) x z a(3) x z^2 ... a(n) x z^n-1)
-//
+// 
 // Examples
 //   a = [1.0000 0.4288 0.76 0.0404 -0.02];
 //   efinal = 0.2;           // Step prediction error
@@ -31,16 +31,12 @@ function r = poly2ac(a,efinal)
 // S. Kay, Modern Spectral Estimation, Prentice Hall, N.J., 1987, Chapter 6.
 
     //errcheck 1: Check for input format of polynomial
-//    if (size(a,1) > 1 | size(a,2) > 1)  then
-//        error("Input polynomial has to be a 1-dimensional array")
-//    end
+   if (size(a,1) > 1 & size(a,2) > 1)  then
+      error("Input polynomial has to be a 1-dimensional array")
+    end
     if (length(efinal) > 1)  then
         error("Input efinal has to be a scalar")
     end
-    if find(a==0)==[] then
          r = rlevinson(a,efinal);
-     else
-         
-    end
    
 endfunction

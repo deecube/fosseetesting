@@ -1,3 +1,4 @@
+//no i/p args are passed to the function
 r=poly2ac();
 disp(r);
 //output
