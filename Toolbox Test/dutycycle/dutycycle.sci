@@ -4,7 +4,6 @@ function [d, initialcross, finalcross, nextcross, midreference]= dutycycle(x, va
     // This function estimate duty cycle of bilevel waveform pulses.
     // Calling Sequence
     // d=dutycycle(x)
-    //dutycycle(x,'fig','on')
     // d= dutycycle(X,Fs) 
     // d=dutycycle(x, t)
     // d= dutycycle(tau, prf)
@@ -301,9 +300,10 @@ else
      int_pos=crossval(1:2:$);
     final_pos=crossval(2:2:$);
     int_neg=crossval(2:2:$);
-    final_neg-crossval(3:2:$);
+    final_neg=crossval(3:2:$);
     
 end
+
 
 
 
