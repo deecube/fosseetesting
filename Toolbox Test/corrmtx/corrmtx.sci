@@ -97,9 +97,8 @@ function [X,varargout]= corrmtx(x,m,varargin)
     else
         method = varargin(1);
     end
-    x = x(:);
     n = length(x);
-    
+    x = matrix(x,1,n);
     x_padded = [zeros(1,m),x,zeros(1,m)];
     X = zeros( (n + m),(m + 1) );
     for i = 1:size(X,1)
@@ -116,8 +115,7 @@ function [X,varargout]= corrmtx(x,m,varargin)
     case 'covariance' then
         X = X(m+1:n,:);
     case 'modified' then
-        Xtemp = conj(X(:,$:-1:1));
-   X = [X;Xtemp]./sqrt(2);
+        X = [X(m+1:n,:)  ; conj(mtlb_fliplr(X(m+1:n,:)))];
     else X = X;
 end
 
