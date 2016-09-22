@@ -8,8 +8,10 @@ nfft=6;
 
 [S,f] = pmusic(x,p,nfft,fs,nwin,noverlap,1);
 //output
-//  2.  
-
-
-//matlab
-// Too many numeric options given
+// !--error 72 
+//pmusic: Atmost 6 numeric arguments expected
+//at line      90 of function pmusic called by :  
+//[S,f] = pmusic(x,p,nfft,fs,nwin,noverlap,1);
+//at line       9 of exec file called by :    
+//sic/pmusic10.sce', -1
+// 

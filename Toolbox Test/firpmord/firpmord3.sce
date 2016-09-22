@@ -9,23 +9,18 @@
           disp(ao);
           disp(w);
 //output
-//!--error 116 
-//firpmord: Wrong value for argument #1 (f): Values must be between 0 and fs/2
-//at line     109 of function firpmord called by :  
-// = firpmord(f,a,dev)
-
-//matlab o/p
-//     3
-//
-//         0
-//         0
-//    0.5000
-//    1.0000
-//
-//     1
-//     1
-//     0
-//     0
-//
-//    10
-//     1
+//    3.  
+// 
+//    0.   
+//    0.   
+//    0.5  
+//    1.   
+// 
+//    1.  
+//    1.  
+//    0.  
+//    0.  
+// 
+//    10.  
+//    1.   
+// 

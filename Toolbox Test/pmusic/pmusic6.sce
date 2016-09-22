@@ -6,28 +6,12 @@ f=[5];
 disp(S);
 disp(f);
 //output
-// 2.  
-// !--error 10000 
-//Wrong dimension for argument #3; must be a scalar|vector
-//at line      92 of function pmusic called by :  
-//[S,f] = pmusic(x,p,f,fs);
-//at line       5 of exec file called by :    
-//sic/pmusic6.sce', -1
+//    6.4454494  
+//    0.5509978  
+//    0.2413610  
 // 
-
-
-//corresponding MATLAB o/p
-//disp(S);
-//    6.4454
-//    0.4217
-//    0.2126
+//    0.        
+//    800000.   
+//    1600000.  
+// 
 //
-//>> f
-//
-//f =
-//
-//           0
-//      800000
-//     1600000
-
->> 

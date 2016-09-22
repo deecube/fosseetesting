@@ -259,9 +259,4 @@ S_matlab=[6.44544936549883
 6.37661051421873];
 y=assert_checkalmostequal(S,S_matlab);
 //output
-//   2.  
-// !--error 10000 
-//assert_checkalmostequal: Assertion failed: expected = [6.4454494 ...] while computed = [28.039172 ...]
-//at line      22 of function assert_generror called by :  
-//at line     103 of function assert_checkalmostequal called by :  
-//y=assert_checkalmostequal(S,S_matlab);
+//T

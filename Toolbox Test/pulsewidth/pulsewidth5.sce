@@ -34,7 +34,7 @@ x=[0.0;
 4.97862259083664;
 ]
 fs=4e6;
-[d,initcross]=(x);
+[d initialcross]=(x);
 disp('d',d);
 disp('initial cross',initcross);
 //output

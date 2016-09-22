@@ -16,7 +16,7 @@ function [w, initialcross, finalcross, midreference]=pulsewidth(x, varargin)
     // [w initialcross finalcross midreference]=pulsewidth(x, t, 'Polarity', pol)
     // [w initialcross finalcross midreference]=pulsewidth(x, t, 'MidPercentReferenceLevel', N )
     // [w initialcross finalcross midreference]= pulsewidth(x, t, 'Tolerance', M)
-    // [w initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels', [O 1])
+    // [w initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels', O)
     // [w initialcross finalcross midreference]= pulsewidth(x, t,'StateLevels', O, 'fig', on or off)
     //  
     // Parameters
@@ -270,7 +270,7 @@ else
      int_pos=crossval(1:2:$);
     final_pos=crossval(2:2:$);
     int_neg=crossval(2:2:$);
-    final_neg-crossval(3:2:$);
+    final_neg=crossval(3:2:$);
     
 end
 

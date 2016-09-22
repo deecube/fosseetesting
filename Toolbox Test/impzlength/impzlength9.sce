@@ -1,7 +1,6 @@
 //no i/p args are passed to the function
 clear;
 clc;
-exec('/home/debdeep/Desktop/TEST NOW!!/impzlength.sci');
 len=impzlength();
 //output
 //!--error 4 

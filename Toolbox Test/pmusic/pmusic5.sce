@@ -6,29 +6,16 @@ nfft=6;
 disp(S);
 disp(f);
 //output
-//   2.  
-// !--error 10000 
-//Wrong dimension for argument #3; must be a scalar|vector
-//at line      92 of function pmusic called by :  
-//[S,f] = pmusic(x,p,nfft,fs)
-//at line       5 of exec file called by :    
-//sic/pmusic5.sce', -1
 
-//corresponding MATLAB o/p
+// 
+//    6.4454494  
+//    0.5509978  
+//    0.2413610  
+//    0.1686702  
+// 
+//    0.         
+//    666666.67  
+//    1333333.3  
+//    2000000.   
+// 
 //
-//S =
-//
-//    6.4454
-//    0.5510
-//    0.2414
-//    0.1687
-//
-//
-//f =
-//
-//   1.0e+06 *
-//
-//         0
-//    0.6667
-//    1.3333
-//    2.0000
