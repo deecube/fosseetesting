@@ -5,7 +5,12 @@ fs=500;
 y = modulate(x,fc,fs,'amdsb-tc');
 disp(y);
 //output
-//!--error 10000 
-//Method not recognised
-//at line     172 of function modulate called by :  
-//y = modulate(x,fc,fs,'amdsb-tc');
+//
+//         column 1 to 4
+// 
+//    0.    0.3090170  - 1.618034  - 2.427051  
+// 
+//         column 5 to 8
+// 
+//    1.236068    6.    27.193496  - 5.663119  
+// 

@@ -1,6 +1,4 @@
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
+
 x=[1 2 3 4 5 6 2 3 7];
 p=3;
 nwin=7;

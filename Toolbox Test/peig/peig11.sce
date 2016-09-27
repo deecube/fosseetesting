@@ -1,7 +1,4 @@
 //too many i/p args are passed to the function
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
 x=[1 2 3 4 5 6 2 3 7];
 p=3;
 nwin=7;
@@ -13,6 +10,9 @@ nfft=6;
 disp(S);
 disp(f);
 //output
-// returns S and f as  129X1 column vectors 
-//matlab
-//Too many numeric options given.
+ !--error 72 
+peig: Atmost 6 numeric arguments expected
+at line      80 of function peig called by :  
+[S,f] = peig(x,p,nfft,fs,nwin,noverlap,1);
+at line       9 of exec file called by :    
+est\peig\peig11.sce', -1

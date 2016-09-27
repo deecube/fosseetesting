@@ -1,6 +1,4 @@
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
+
 R=[1.10000000000000	0.951056516295154	0.809016994374948	0.587785252292];
 [p,w]=peig(R,1,'corr');
 disp(p);

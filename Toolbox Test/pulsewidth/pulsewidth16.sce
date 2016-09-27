@@ -39,11 +39,5 @@ w=pulsewidth (x, t, 'Polarity', 'negative');
 disp(w);
 
 //output
-//
-//  - 74009040.  
 
-
-//corresponding MATLAB o/p
-
-//   5.6023e+07
-
+//    28011412.  

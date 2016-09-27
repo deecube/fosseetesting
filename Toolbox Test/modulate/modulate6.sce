@@ -5,16 +5,7 @@ fs=500;
 y = modulate(x,fc,fs,'am');
 disp(y);
 //output
-//!--error 144 
-//Undefined operation for the given operands.
-//check or define function %s_2_s for overloading.
-//at line      56 of function modulate called by :  
-//y = modulate(x,fc,fs,'am');
-
-
-//matlab o/p
-// 1.0e+03 *
-//
-//    0.0010    0.0020    0.0030
-//    0.0319    0.0398    0.0558
-//    1.0078    1.1338    1.0078
+//    1.           2.           3.         
+//    31.87143     39.839288    55.775003  
+//    1007.7881    1133.7616    1007.7881  
+// 

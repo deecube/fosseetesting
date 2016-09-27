@@ -1,7 +1,5 @@
 //check o/p when i/p is a vector
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
+
 x=[1 2 3 4 5 6 2 3 7];
 p=3;
 [S,w] = peig(x,p);
@@ -141,12 +139,4 @@ fs=assert_checkalmostequal(S,S_matlab);
 //fw=assert_checkalmostequal(w,w_matlab);
 //disp(fw);
 disp(fs);
-//output
-//!--error 10000 
-//assert_checkalmostequal: Assertion failed: expected = [9.9719 ...] while computed = [33.028256 ...]
-//at line      22 of function assert_generror called by :  
-//at line     103 of function assert_checkalmostequal called by :  
-//fs=assert_checkalmostequal(S,S_matlab);
-//at line     140 of exec file called by :    
-//pmusic/peig2.sce', -1
- 
+

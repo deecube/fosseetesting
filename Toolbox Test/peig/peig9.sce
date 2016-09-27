@@ -1,6 +1,4 @@
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
+
 x=[1 2 3 4 5 6 2 3 7];
 p=3;
 [S,f]=peig(x,p,'centered');
@@ -263,9 +261,5 @@ S_matlab=[0.809961002046400
 f=assert_checkalmostequal(S,S_matlab);
 disp(f);
 //output
-//!--error 21 
-//Invalid index.
-//at line      50 of function pseudospectrum called by :  
-//at line      95 of function peig called by :  
-//[S,f]=peig(x,p,'centered');
+
 

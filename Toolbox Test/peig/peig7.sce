@@ -1,6 +1,4 @@
-clc;
-clear;
-exec('/home/debdeep/Desktop/TEST NOW!!/peig/peig.sci');
+
 x=[1 2 3 4 5 6 2 3 7];
 p=3;
 [S,f]=peig(x,p,'onesided');
@@ -135,9 +133,3 @@ S_matlab=[9.97187574232214
 0.810396579135956];
 f=assert_checkalmostequal(S,S_matlab);
 disp(f);
-//output
-//!--error 10000 
-//assert_checkalmostequal: Assertion failed: expected = [9.9718757 ...] while computed = [33.028256 ...]
-//at line      22 of function assert_generror called by :  
-//at line     103 of function assert_checkalmostequal called by :  
-//f=assert_checkalmostequal(S,S_matlab);
